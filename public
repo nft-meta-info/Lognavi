@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
+    <form action="https://apps.apple.com/app/id1495934384" method="GET" id="ios">
+      <input type="hidden" name="mt" value="8">
+    </form>
+    <form action="https://play.google.com/store/apps/details" method="GET" id="android">
+      <input type="hidden" name="id" value="jp.co.aspark.lognavi">
+    </form>
+
+    <script>
+      let userAgent = navigator.userAgent.toLowerCase();
+      //
+      if (userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipod") > -1 || userAgent.indexOf("ipad") > -1) {
+        location.href = "https://apps.apple.com/app/id1495934384?mt=8";
+      } else if (userAgent.indexOf("android") > -1) {
+        location.href = "https://play.google.com/store/apps/details?id=jp.co.aspark.lognavi";
+      } else {
+        $("#ios").submit();
+      }
+    </script>
+
+  </body>
+</html>
