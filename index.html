@@ -7,12 +7,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   </head>
   <body>
-    <form action="https://t.felmat.net/fmcl?ak=B78095.1.Y118225M.J997835" method="GET" id="ios">
-      <input type="hidden" name="mt" value="8">
-    </form>
-    <form action="https://t.felmat.net/fmcl?ak=B78095.1.E125022H.J997835" method="GET" id="android">
-      <input type="hidden" name="id" value="jp.co.aspark.lognavi">
-    </form>
 
     <script>
       let userAgent = navigator.userAgent.toLowerCase();
@@ -21,7 +15,7 @@
       } else if (userAgent.indexOf("android") > -1) {
         location.href = "https://t.felmat.net/fmcl?ak=B78095.1.E125022H.J997835";
       } else {
-        $("#ios").submit();
+        location.href = "https://t.felmat.net/fmcl?ak=B78095.1.E125022H.J997835";
       }
     </script>
 
