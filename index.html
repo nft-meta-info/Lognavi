@@ -1,53 +1,23 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>数字フォーマット</title>
-  <script>
-    const eraName = "令和";
+  <head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lognavi(ログナビ) - 学生限定の就活 アプリ" />
+    <meta name="twitter:description" content="就活の相談から履修の相談まで！全国の学生とつながろう！" />
+    <meta name="twitter:image" content="https://www.afi-b.com/upload_image/14372-1681656107-3.jpg?1680503577" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+  <body>
 
-    function formatReiwaDate(dateStr) {
-      const day = parseInt(dateStr.slice(-2));
-      const month = parseInt(dateStr.slice(-4, -2));
-      const year = parseInt(dateStr.slice(0, -4));
+    <script>
+      let userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipod") > -1 || userAgent.indexOf("ipad") > -1) {
+        location.href = "https://t.felmat.net/fmcl?ak=B78095.1.Y118225M.J997835";
+      } else if (userAgent.indexOf("android") > -1) {
+        location.href = "https://t.felmat.net/fmcl?ak=B78095.1.E125022H.J997835";
+      } else {
+        location.href = "https://t.felmat.net/fmcl?ak=B78095.1.E125022H.J997835";
+      }
+    </script>
 
-      const formattedDate = `${eraName}${year}年${month}月${day}日`;
-      return formattedDate;
-    }
-
-    function formatReiwaMonth(dateStr) {
-      const month = parseInt(dateStr.slice(-2));
-      const year = parseInt(dateStr.slice(0, -2));
-
-      const formattedMonth = `${eraName}${year}年${month}月`;
-      return formattedMonth;
-    }
-
-    function updateFormattedDate() {
-      const inputElement = document.getElementById('numberInput');
-      const dateStr = inputElement.value;
-
-      const formattedDate = formatReiwaDate(dateStr);
-      const formattedMonth = formatReiwaMonth(dateStr);
-
-      const dateOutputElement = document.getElementById('dateOutput');
-      dateOutputElement.textContent = formattedDate;
-
-      const monthOutputElement = document.getElementById('monthOutput');
-      monthOutputElement.textContent = formattedMonth;
-    }
-  </script>
-</head>
-<body>
-  <h1>数字フォーマット</h1>
-  <label for="numberInput">数字を入力してください:</label>
-  <input type="text" id="numberInput" oninput="updateFormattedDate()">
-  <div>
-    <h2>日付結果:</h2>
-    <div id="dateOutput"></div>
-  </div>
-  <div>
-    <h2>月結果:</h2>
-    <div id="monthOutput"></div>
-  </div>
-</body>
+  </body>
 </html>
